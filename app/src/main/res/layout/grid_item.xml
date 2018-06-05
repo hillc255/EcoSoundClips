@@ -20,8 +20,9 @@
         android:paddingBottom="15dp"
         android:layout_gravity="bottom"
         android:textColor="@android:color/white"
-        android:textAllCaps="true"
-        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="24sp"
         android:background="#55000000"/>
 
 </FrameLayout>

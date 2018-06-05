@@ -21,13 +21,13 @@ public final class ImageAdapter extends BaseAdapter {
         //https://stackoverflow.com/questions/15261088/gridview-with-two-columns-and-auto-resized-images
 
         mItems.add(new Item("Earthquake", R.drawable.earthquake));
-        mItems.add(new Item("Fire", R.drawable.earthquake));
-        mItems.add(new Item("Forest", R.drawable.earthquake));
-        mItems.add(new Item("Jungle", R.drawable.earthquake));
-        mItems.add(new Item("Ocean", R.drawable.earthquake));
-        mItems.add(new Item("Rain", R.drawable.earthquake));
-        mItems.add(new Item("Thunder", R.drawable.earthquake));
-        mItems.add(new Item("Wind", R.drawable.earthquake));
+        mItems.add(new Item("Fire", R.drawable.fire));
+        mItems.add(new Item("Forest", R.drawable.forest));
+        mItems.add(new Item("Jungle", R.drawable.jungle));
+        mItems.add(new Item("Ocean", R.drawable.ocean));
+        mItems.add(new Item("Rain", R.drawable.rain));
+        mItems.add(new Item("Thunder", R.drawable.thunder));
+        mItems.add(new Item("Wind", R.drawable.wind));
     }
 
     @Override

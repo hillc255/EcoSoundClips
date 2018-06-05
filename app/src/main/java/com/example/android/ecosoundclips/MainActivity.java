@@ -20,18 +20,12 @@ public class MainActivity extends AppCompatActivity {
         GridView gridView = (GridView) findViewById(R.id.gridview);
         gridView.setAdapter(new ImageAdapter(this));
 
-//            public void onItemClick(AdapterView<?> parent, View v,
-//                                    int position, long id) {
-//                Toast.makeText(MainActivity.this, "" + position,
-//                        Toast.LENGTH_SHORT).show();
-//            }
-//        });
-
             gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                // Create a new intent to open the {@link NumbersActivity}
+                // Create a new intent to open the {@link SoundActivity}
                 Intent soundIntent = new Intent(MainActivity.this, SoundActivity.class);
-
+                //pass variable relating to grid number position
+                soundIntent.putExtra("gridNumber",position);
                 // Start the new activity
                 startActivity(soundIntent);
             }

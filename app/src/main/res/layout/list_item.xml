@@ -14,33 +14,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="20sp"
         tools:text="Name:  earthquake"
         />
 
     <ImageButton
-        android:id="@+id/play_button"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:id="@+id/playbutton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_alignRight="@+id/title"
-        android:src="@drawable/play_button"
+        android:src="@drawable/playbutton"
         android:background="@null" />
 
     <TextView
-        android:id="@+id/lengthsize"
+        android:id="@+id/length"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/title"
-        android:paddingTop="8dp"
-        tools:text="Length:  2 sec  Size: Mb"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        tools:text="Length:2 seconds"
         />
 
     <TextView
-        android:id="@+id/source"
+        android:id="@+id/size"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lengthsize"
-        android:paddingTop="8dp"
-        tools:text="Source:"
+        android:layout_below="@+id/length"
+        android:paddingBottom="8dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        tools:text="Size: 0.14 Mb"
         />
 
 </RelativeLayout>
