@@ -51,4 +51,15 @@
         tools:text="Size: 0.14 Mb"
         />
 
+    <TextView
+        android:id="@+id/sound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/size"
+        android:paddingBottom="8dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        tools:text="Location of clip" />
+
 </RelativeLayout>

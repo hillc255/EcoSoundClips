@@ -4,7 +4,7 @@ import android.media.MediaPlayer;
 
 /**
      * {@Link Sound represents a list of mp3 environmental sound clips
-     * It contains title, length, size of sound clip - Class Declaration
+     * It contains title, length, size of sound clip and sound clip - Class Declaration
      */
     public class Sound {
 
@@ -17,17 +17,23 @@ import android.media.MediaPlayer;
         /** Size of the sound clip - State */
         private String mSizeSoundClip;
 
+        /** Name of mp3 sound clip - State */
+        private int mSoundClip;
 
-        /** Constructor - create new sound object
+
+
+    /** Constructor - create new sound object
          * Setters not needed because the sound object will not change
          * @param vTitleSoundClip is the sound title
          * @param vLengthSoundClip is the sound length
          * @param vSizeSoundClip is the sound size
+         * @param vSoundClip is the mp3 sound clip
          * */
-        public Sound(String vTitleSoundClip, String vLengthSoundClip, String vSizeSoundClip){
+        public Sound(String vTitleSoundClip, String vLengthSoundClip, String vSizeSoundClip, int vSoundClip){
             mTitleSoundClip = vTitleSoundClip;
             mLengthSoundClip = vLengthSoundClip;
             mSizeSoundClip = vSizeSoundClip;
+            mSoundClip = vSoundClip;
         }
 
         /**
@@ -53,6 +59,14 @@ import android.media.MediaPlayer;
         public String getSizeSoundClip(){
             return mSizeSoundClip;
         }
+
+        /**
+        * Get mp3 sound clip - Getter Method
+         * @return int
+         */
+         public int getSoundClip(){
+        return mSoundClip;
+    }
 
     }
 

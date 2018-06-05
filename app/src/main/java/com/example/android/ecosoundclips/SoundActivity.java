@@ -1,20 +1,11 @@
 package com.example.android.ecosoundclips;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
-import android.view.View.OnClickListener;
-import android.media.MediaPlayer;
-import com.example.android.ecosoundclips.SoundAdapter;
 
 
 public class SoundActivity extends AppCompatActivity {
@@ -31,30 +22,30 @@ public class SoundActivity extends AppCompatActivity {
 
         // Create a list of sounds
         ArrayList<Sound> sounds = new ArrayList<Sound>();
-        sounds.add(new Sound("Major earthquake", "2 seconds", "0.19 Mb"));
-        sounds.add(new Sound("Moderate earthquake", "4 seconds", "0.84 Mb"));
-        sounds.add(new Sound("Earthquake breaking trees", "6 seconds", "0.53 Mb"));
-        sounds.add(new Sound("Crackling fireplace", "4 seconds", "0.41 Mb"));
-        sounds.add(new Sound("Forest fire", "5 seconds", "0.42 Mb"));
-        sounds.add(new Sound("Fire burning", "5 seconds", "0.45 Mb"));
-        sounds.add(new Sound("Forest in the morning", "3 seconds", "0.66 Mb"));
-        sounds.add(new Sound("Forest at night", "7 seconds", "0.59 Mb"));
-        sounds.add(new Sound("Forest birds", "6 seconds", "0.53 Mb"));
-        sounds.add(new Sound("Jungle Monkeys", "8 seconds", "0.80 Mb"));
-        sounds.add(new Sound("Jungle Animals", "7 seconds", "0.67 Mb"));
-        sounds.add(new Sound("Jungle at Night", "9 seconds", "0.85 Mb"));
-        sounds.add(new Sound("Beach", "7 seconds", "0.77 Mb"));
-        sounds.add(new Sound("Big wave", "3 seconds", "0.26 Mb"));
-        sounds.add(new Sound("Ocean laps", "3 seconds", "0.32 Mb"));
-        sounds.add(new Sound("Thunder and rain", "4 seconds", "0.48 Mb"));
-        sounds.add(new Sound("Heavy rain", "4 seconds", "0.73 Mb"));
-        sounds.add(new Sound("Light rain", "5 seconds", "0.50 Mb"));
-        sounds.add(new Sound("Thunder", "4 seconds", "0.28 Mb"));
-        sounds.add(new Sound("Thunder crack", "4 seconds", "0.44 Mb"));
-        sounds.add(new Sound("Thunder rumble", "4 seconds", "0.20 Mb"));
-        sounds.add(new Sound("Wind chimes", "4 seconds", "0.28 Mb"));
-        sounds.add(new Sound("High winds", "4 seconds", "0.33 Mb"));
-        sounds.add(new Sound("Breeze", "5 seconds", "0.42 Mb"));
+        sounds.add(new Sound("Major earthquake", "2 seconds", "0.19 Mb",R.raw.equake1));
+        sounds.add(new Sound("Moderate earthquake", "4 seconds", "0.84 Mb",R.raw.equake2));
+        sounds.add(new Sound("Earthquake breaking trees", "6 seconds", "0.53 Mb",R.raw.equake3));
+        sounds.add(new Sound("Crackling fireplace", "4 seconds", "0.41 Mb",R.raw.fire1));
+        sounds.add(new Sound("Forest fire", "5 seconds", "0.42 Mb",R.raw.fire2));
+        sounds.add(new Sound("Fire burning", "5 seconds", "0.45 Mb",R.raw.fire3));
+        sounds.add(new Sound("Forest in the morning", "3 seconds", "0.66 Mb",R.raw.forest1));
+        sounds.add(new Sound("Forest at night", "7 seconds", "0.59 Mb",R.raw.forest2));
+        sounds.add(new Sound("Forest birds", "6 seconds", "0.53 Mb",R.raw.forest3));
+        sounds.add(new Sound("Jungle Monkeys", "8 seconds", "0.80 Mb",R.raw.jungle1));
+        sounds.add(new Sound("Jungle Animals", "7 seconds", "0.67 Mb",R.raw.jungle2));
+        sounds.add(new Sound("Jungle at Night", "9 seconds", "0.85 Mb",R.raw.jungle3));
+        sounds.add(new Sound("Beach", "7 seconds", "0.77 Mb",R.raw.ocean1));
+        sounds.add(new Sound("Big wave", "3 seconds", "0.26 Mb",R.raw.ocean2));
+        sounds.add(new Sound("Ocean laps", "3 seconds", "0.32 Mb",R.raw.ocean3));
+        sounds.add(new Sound("Thunder and rain", "4 seconds", "0.48 Mb",R.raw.rain1));
+        sounds.add(new Sound("Heavy rain", "4 seconds", "0.73 Mb",R.raw.rain2));
+        sounds.add(new Sound("Light rain", "5 seconds", "0.50 Mb",R.raw.rain3));
+        sounds.add(new Sound("Thunder", "4 seconds", "0.28 Mb",R.raw.thunder1));
+        sounds.add(new Sound("Thunder crack", "4 seconds", "0.44 Mb",R.raw.thunder2));
+        sounds.add(new Sound("Thunder rumble", "4 seconds", "0.20 Mb",R.raw.thunder3));
+        sounds.add(new Sound("Wind chimes", "4 seconds", "0.28 Mb",R.raw.wind1));
+        sounds.add(new Sound("High winds", "4 seconds", "0.33 Mb",R.raw.wind2));
+        sounds.add(new Sound("Breeze", "5 seconds", "0.42 Mb",R.raw.wind3));
 
 
         //create sublists from ArrayList for each gridView

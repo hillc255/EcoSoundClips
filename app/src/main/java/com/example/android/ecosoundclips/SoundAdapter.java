@@ -1,22 +1,18 @@
 package com.example.android.ecosoundclips;
 
 import android.app.Activity;
-import android.content.Context;
 import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.example.android.ecosoundclips.SoundActivity;
 
 import java.util.ArrayList;
 
@@ -27,13 +23,13 @@ public class SoundAdapter extends ArrayAdapter<Sound> {
 
     //Eco sound clips mp3
     private final int[] resID = {R.raw.equake1, R.raw.equake2, R.raw.equake3,
-                                 R.raw.fire1, R.raw.fire2, R.raw.fire3,
-                                 R.raw.forest1, R.raw.forest2, R.raw.forest3,
-                                 R.raw.jungle1, R.raw.jungle2, R.raw.jungle3,
-                                 R.raw.ocean1, R.raw.ocean2, R.raw.ocean3,
-                                 R.raw.rain1, R.raw.rain2, R.raw.rain3,
-                                 R.raw.thunder1, R.raw.thunder2, R.raw.thunder3,
-                                 R.raw.wind1, R.raw.wind2, R.raw.wind3};
+            R.raw.fire1, R.raw.fire2, R.raw.fire3,
+            R.raw.forest1, R.raw.forest2, R.raw.forest3,
+            R.raw.jungle1, R.raw.jungle2, R.raw.jungle3,
+            R.raw.ocean1, R.raw.ocean2, R.raw.ocean3,
+            R.raw.rain1, R.raw.rain2, R.raw.rain3,
+            R.raw.thunder1, R.raw.thunder2, R.raw.thunder3,
+            R.raw.wind1, R.raw.wind2, R.raw.wind3};
 
     /**
      * This is our own custom constructor (it doesn't mirror a superclass constructor).
@@ -62,22 +58,27 @@ public class SoundAdapter extends ArrayAdapter<Sound> {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
 
+            TextView textView = (TextView) listItemView.findViewById(R.id.title);
+            // tname = textView.getText();
+
+
             ImageButton imageButton = (ImageButton) listItemView.findViewById(R.id.playbutton);
             imageButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     ((ListView) parent).performItemClick(v, position, 0);
 
-                    Log.d("DEBUG", "Number position = " + position);
+              //      Log.d("DEBUG", "View contents= " + v);
+               //     Log.d("DEBUG", "Number position = " + position);
 
                     //create new MediaPlayer every time playbutton is selected
                     MediaPlayer mp = new MediaPlayer();
                     mp = MediaPlayer.create(getContext(), resID[position]);
-                    if (mp.isPlaying()){
+                    if (mp.isPlaying()) {
                         mp.pause();
                         mp.seekTo(0);
-                    }
-                    else{
+                        mp.stop();
+                    } else {
                         mp.start();
                     }
                 }
@@ -106,7 +107,15 @@ public class SoundAdapter extends ArrayAdapter<Sound> {
         // set this text on the number TextView
         sizeTextView.setText(currentSound.getSizeSoundClip());
 
-        // Return the whole list item layout (containing 2 TextViews)
+
+        //public int getSoundClip(){ return mSoundClip;
+        TextView soundTextView = (TextView) listItemView.findViewById(R.id.sound);
+        soundTextView.setText(currentSound.getSoundClip());
+
+        //int retval=soundTextView.IndexOf(currentSound.getSoundClip());
+
+
+        // Return the whole list item layout (containing 4 TextViews)
         // so that it can be shown in the ListView
         return listItemView;
     }
