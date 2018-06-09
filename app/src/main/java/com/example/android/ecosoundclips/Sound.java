@@ -18,9 +18,7 @@ import android.media.MediaPlayer;
         private String mSizeSoundClip;
 
         /** Name of mp3 sound clip - State */
-        private int mSoundClip;
-
-
+        private String mSoundClip;
 
     /** Constructor - create new sound object
          * Setters not needed because the sound object will not change
@@ -29,7 +27,7 @@ import android.media.MediaPlayer;
          * @param vSizeSoundClip is the sound size
          * @param vSoundClip is the mp3 sound clip
          * */
-        public Sound(String vTitleSoundClip, String vLengthSoundClip, String vSizeSoundClip, int vSoundClip){
+        public Sound(String vTitleSoundClip, String vLengthSoundClip, String vSizeSoundClip, String vSoundClip){
             mTitleSoundClip = vTitleSoundClip;
             mLengthSoundClip = vLengthSoundClip;
             mSizeSoundClip = vSizeSoundClip;
@@ -62,9 +60,9 @@ import android.media.MediaPlayer;
 
         /**
         * Get mp3 sound clip - Getter Method
-         * @return int
+         * @return String
          */
-         public int getSoundClip(){
+         public String getSoundClip(){
         return mSoundClip;
     }
 

@@ -1,6 +1,7 @@
 package com.example.android.ecosoundclips;
 
 import android.app.Activity;
+import android.content.Context;
 import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -8,10 +9,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
-import android.widget.ListView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -20,16 +19,7 @@ public class SoundAdapter extends ArrayAdapter<Sound> {
 
     private static final String LOG_TAG = SoundAdapter.class.getSimpleName();
     private MediaPlayer mp;
-
-    //Eco sound clips mp3
-    private final int[] resID = {R.raw.equake1, R.raw.equake2, R.raw.equake3,
-            R.raw.fire1, R.raw.fire2, R.raw.fire3,
-            R.raw.forest1, R.raw.forest2, R.raw.forest3,
-            R.raw.jungle1, R.raw.jungle2, R.raw.jungle3,
-            R.raw.ocean1, R.raw.ocean2, R.raw.ocean3,
-            R.raw.rain1, R.raw.rain2, R.raw.rain3,
-            R.raw.thunder1, R.raw.thunder2, R.raw.thunder3,
-            R.raw.wind1, R.raw.wind2, R.raw.wind3};
+    private Sound currentSound;
 
     /**
      * This is our own custom constructor (it doesn't mirror a superclass constructor).
@@ -42,7 +32,7 @@ public class SoundAdapter extends ArrayAdapter<Sound> {
     public SoundAdapter(Activity context, ArrayList<Sound> sounds) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
-        // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not
+        // Because this is a custom adapter for two TextViews and an ImageGridView, the adapter is not
         // going to use this second argument, so it can be any value. Here, we used 0.
         super(context, 0, sounds);
     }
@@ -58,31 +48,35 @@ public class SoundAdapter extends ArrayAdapter<Sound> {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
 
-            TextView textView = (TextView) listItemView.findViewById(R.id.title);
-            // tname = textView.getText();
+            Log.d("DEBUG", "check position inside = " + position);
 
-
-            ImageButton imageButton = (ImageButton) listItemView.findViewById(R.id.playbutton);
-            imageButton.setOnClickListener(new View.OnClickListener() {
+            ImageView imageView = (ImageView) listItemView.findViewById(R.id.playbutton);
+            imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ((ListView) parent).performItemClick(v, position, 0);
 
-              //      Log.d("DEBUG", "View contents= " + v);
-               //     Log.d("DEBUG", "Number position = " + position);
+                    Sound currentSound = getItem(position);
+                    String name = currentSound.getSoundClip();
+
+                    // create context Object for  to Fetch image from resourse
+                    Context mContext = getContext();
+
+                    // assign location of sound file
+                    int i = mContext.getResources().getIdentifier(name, "raw", mContext.getPackageName());
 
                     //create new MediaPlayer every time playbutton is selected
                     MediaPlayer mp = new MediaPlayer();
-                    mp = MediaPlayer.create(getContext(), resID[position]);
+                    mp = MediaPlayer.create(getContext(), i);
                     if (mp.isPlaying()) {
                         mp.pause();
                         mp.seekTo(0);
-                        mp.stop();
+                        mp.reset();
                     } else {
                         mp.start();
                     }
                 }
             });
+
         }
 
 
@@ -107,18 +101,13 @@ public class SoundAdapter extends ArrayAdapter<Sound> {
         // set this text on the number TextView
         sizeTextView.setText(currentSound.getSizeSoundClip());
 
-
         //public int getSoundClip(){ return mSoundClip;
         TextView soundTextView = (TextView) listItemView.findViewById(R.id.sound);
         soundTextView.setText(currentSound.getSoundClip());
-
-        //int retval=soundTextView.IndexOf(currentSound.getSoundClip());
-
 
         // Return the whole list item layout (containing 4 TextViews)
         // so that it can be shown in the ListView
         return listItemView;
     }
-
 
 }
