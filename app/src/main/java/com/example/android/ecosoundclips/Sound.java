@@ -2,7 +2,7 @@ package com.example.android.ecosoundclips;
 
 import android.media.MediaPlayer;
 
-/**
+    /**
      * {@Link Sound represents a list of mp3 environmental sound clips
      * It contains title, length, size of sound clip and sound clip - Class Declaration
      */
@@ -39,15 +39,14 @@ import android.media.MediaPlayer;
          * @return String
          */
         public String getTitleSoundClip(){
-            return mTitleSoundClip;
+            return "Title: " + mTitleSoundClip;
         }
 
         /**
          * Get length of the sound clip - Getter Method
          * @return String
          */
-        public String getLengthSoundClip(){
-            return mLengthSoundClip;
+        public String getLengthSoundClip(){ return "Length: " + mLengthSoundClip;
         }
 
         /**
@@ -55,15 +54,14 @@ import android.media.MediaPlayer;
          * @return String
          */
         public String getSizeSoundClip(){
-            return mSizeSoundClip;
+            return "Size: " + mSizeSoundClip;
         }
 
         /**
         * Get mp3 sound clip - Getter Method
          * @return String
          */
-         public String getSoundClip(){
-        return mSoundClip;
+         public String getSoundClip(){ return mSoundClip;
     }
 
     }

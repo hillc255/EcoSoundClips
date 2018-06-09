@@ -2,6 +2,7 @@ package com.example.android.ecosoundclips;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -44,24 +45,24 @@ public class SoundAdapter extends ArrayAdapter<Sound> {
 
         // Check if the existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
+
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
-
-            Log.d("DEBUG", "check position inside = " + position);
 
             ImageView imageView = (ImageView) listItemView.findViewById(R.id.playbutton);
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
+                    // get the sound name given the position of the inflated view
                     Sound currentSound = getItem(position);
                     String name = currentSound.getSoundClip();
 
-                    // create context Object for  to Fetch image from resourse
+                    // create context Object for to get the resource number
                     Context mContext = getContext();
 
-                    // assign location of sound file
+                    // assign number to variable given name of resource
                     int i = mContext.getResources().getIdentifier(name, "raw", mContext.getPackageName());
 
                     //create new MediaPlayer every time playbutton is selected

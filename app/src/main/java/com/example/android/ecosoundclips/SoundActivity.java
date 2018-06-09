@@ -24,20 +24,20 @@ public class SoundActivity extends AppCompatActivity {
         ArrayList<Sound> sounds = new ArrayList<Sound>();
         sounds.add(new Sound("Major earthquake", "2 seconds", "0.19 Mb","equake1"));
         sounds.add(new Sound("Moderate earthquake", "4 seconds", "0.84 Mb","equake2"));
-        sounds.add(new Sound("Earthquake breaking trees", "6 seconds", "0.53 Mb","equake3"));
+        sounds.add(new Sound("Earthquake crashing", "6 seconds", "0.53 Mb","equake3"));
         sounds.add(new Sound("Crackling fireplace", "4 seconds", "0.41 Mb","fire1"));
         sounds.add(new Sound("Forest fire", "5 seconds", "0.42 Mb","fire2"));
         sounds.add(new Sound("Fire burning", "5 seconds", "0.45 Mb","fire3"));
-        sounds.add(new Sound("Forest in the morning", "3 seconds", "0.66 Mb","forest1"));
-        sounds.add(new Sound("Forest at night", "7 seconds", "0.59 Mb","forest2"));
+        sounds.add(new Sound("Forest morning", "3 seconds", "0.66 Mb","forest1"));
+        sounds.add(new Sound("Forest night", "7 seconds", "0.59 Mb","forest2"));
         sounds.add(new Sound("Forest birds", "6 seconds", "0.53 Mb","forest3"));
-        sounds.add(new Sound("Jungle Monkeys", "8 seconds", "0.80 Mb","jungle1"));
-        sounds.add(new Sound("Jungle Animals", "7 seconds", "0.67 Mb","jungle2"));
-        sounds.add(new Sound("Jungle at Night", "9 seconds", "0.85 Mb", "jungle3"));
+        sounds.add(new Sound("Jungle monkeys", "8 seconds", "0.80 Mb","jungle1"));
+        sounds.add(new Sound("Jungle animals", "7 seconds", "0.67 Mb","jungle2"));
+        sounds.add(new Sound("Jungle night", "9 seconds", "0.85 Mb", "jungle3"));
         sounds.add(new Sound("Beach", "7 seconds", "0.77 Mb", "ocean1"));
         sounds.add(new Sound("Big wave", "3 seconds", "0.26 Mb","ocean2"));
         sounds.add(new Sound("Ocean laps", "3 seconds", "0.32 Mb","ocean3"));
-        sounds.add(new Sound("Thunder and rain", "4 seconds", "0.48 Mb","rain1"));
+        sounds.add(new Sound("Thunder rain", "4 seconds", "0.48 Mb","rain1"));
         sounds.add(new Sound("Heavy rain", "4 seconds", "0.73 Mb","rain2"));
         sounds.add(new Sound("Light rain", "5 seconds", "0.50 Mb","rain3"));
         sounds.add(new Sound("Thunder", "4 seconds", "0.28 Mb","thunder1"));
@@ -98,9 +98,6 @@ public class SoundActivity extends AppCompatActivity {
         // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Sound} in the list.
         listView.setAdapter(adapter);
-
-
-
 
     }
 

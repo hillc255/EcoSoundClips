@@ -15,10 +15,14 @@ public final class ImageAdapter extends BaseAdapter {
     private final List<Item> mItems = new ArrayList<Item>();
     private final LayoutInflater mInflater;
 
+    //Adapter for GridView with images and text derived from the example below
+    // https://stackoverflow.com/questions/15261088/gridview-with-two-columns-and-auto-resized-images
+
+
     public ImageAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
 
-        //https://stackoverflow.com/questions/15261088/gridview-with-two-columns-and-auto-resized-images
+
 
         mItems.add(new Item("Earthquake", R.drawable.earthquake));
         mItems.add(new Item("Fire", R.drawable.fire));
@@ -67,6 +71,7 @@ public final class ImageAdapter extends BaseAdapter {
 
         return v;
     }
+
 
     private static class Item {
         public final String name;
