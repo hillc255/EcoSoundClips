@@ -71,8 +71,8 @@ public class SoundAdapter extends ArrayAdapter<Sound> {
                     int i = mContext.getResources().getIdentifier(name, "raw", mContext.getPackageName());
 
                     //create new MediaPlayer every time playbutton is selected
-                    MediaPlayer mp = new MediaPlayer();
-                    mp = MediaPlayer.create(getContext(), i);
+                 MediaPlayer mp = new MediaPlayer();
+                 mp = MediaPlayer.create(getContext(), i);
                     if (mp.isPlaying()) {
                         mp.pause();
                         mp.seekTo(0);
@@ -115,5 +115,6 @@ public class SoundAdapter extends ArrayAdapter<Sound> {
         // so that it can be shown in the ListView
         return listItemView;
     }
+
 
 }
