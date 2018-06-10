@@ -1,5 +1,4 @@
 # EcoSoundClips
-Android Studio project: 
 
 ## Synopsis
 
