@@ -4,7 +4,7 @@
 
 Name: EcoSoundClips
 
-This is an Android app to play environmental sounds for the Grow with Google - Android Basic Development Nanodegree Scholarship 2018.
+This is an Android app to play environmental sounds.
 
 There are 8 categories of environmental sounds: Earthquake, Fire, Forest, Jungle, Ocean, Rain, Thunder and Wind.  
 
@@ -23,12 +23,14 @@ MainActivity, ImageAdapter, and ImageGrid display the 8 category photographs in 
 SoundActivity, SoundAdapter, are Sound display the list of songs related to the categories.  The sound array list is created on the SoundActivity file.
 
 Structure of the code derives from 2 sources:
+
 https://github.com/udacity/ud839_Miwok
+
 https://stackoverflow.com/questions/15261088/gridview-with-two-columns-and-auto-resized-images
 
 ## Motivation
 
-This is the fourth exercise in the "Grow with Google-Android Basic Development Nanodegree 2018" program with Udacity.
+This is the fourth exercise in the "Grow with Google - Android Basic Development Nanodegree Scholarship 2018" program with Udacity.
 
 The purpose of the exercise is to create "musical structure app." I opted for a app with environmental sounds instead of a albumn covers and songs.
 
