@@ -15,7 +15,7 @@ Clicking on the play button, to the right of each sound list, plays a clip of th
 <p align="left">
  <kbd><img width="150" height="261" src="readme_assets/EcoSoundClips.gif"></kbd>
 </p>
-<p align="left">
+<p align="center">
  <kbd><img width="150" height="261" src="readme_assets/EcoSoundClips_list.gif"></kbd>
 </p>
 
