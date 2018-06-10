@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- activity_main dimens -->
+    <dimen name="grid_spacing">0dp</dimen>
+    <!-- grid_item dimens -->
+    <dimen name="pad_right">10dp</dimen>
+    <dimen name="pad_left">10dp</dimen>
+    <dimen name="pad_top">15dp</dimen>
+    <dimen name="pad_bottom">15dp</dimen>
+    <dimen name="text_size">24sp</dimen>
+    <!-- list_item dimens -->
+    <dimen name="pad_top_list">16dp</dimen>
+    <dimen name="pad_right_list">20dp</dimen>
+    <dimen name="pad_left_list">20dp</dimen>
+    <dimen name="text_size_list">24sp</dimen>
+    <dimen name="image_width">30dp</dimen>
+    <dimen name="image_height">30dp</dimen>
+    <!-- sound_list dimens -->
+    <dimen name="pad_bottom_sound">16dp</dimen>
+    <dimen name="pad_left_sound">16dp</dimen>
+    <dimen name="pad_right_sound">16dp</dimen>
+    <dimen name="pad_top_sound">16dp</dimen>
+
+</resources>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.android.ecosoundclips.ImageGridView
+    <com.example.android.ecosoundclips.ImageGrid
         android:id="@+id/picture"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,15 +14,17 @@
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
+        android:paddingLeft="@dimen/pad_left"
+        android:paddingStart="@dimen/pad_left"
+        android:paddingRight="@dimen/pad_right"
+        android:paddingEnd="@dimen/pad_right"
+        android:paddingTop="@dimen/pad_top"
+        android:paddingBottom="@dimen/pad_bottom"
         android:layout_gravity="bottom"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         android:textAllCaps="false"
-        android:textSize="24sp"
-        android:background="#55000000"/>
+        android:textSize="@dimen/text_size"
+        android:background="@color/translucent"/>
 
 </FrameLayout>

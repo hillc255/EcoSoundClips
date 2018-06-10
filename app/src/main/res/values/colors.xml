@@ -7,4 +7,5 @@
     <!-- colors -->
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
+    <color name="translucent">#55000000</color>
 </resources>

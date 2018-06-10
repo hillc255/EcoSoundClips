@@ -5,28 +5,32 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="16dp"
-    android:paddingRight="20dp"
-    android:paddingLeft="20dp">
+    android:paddingTop="@dimen/pad_top_list"
+    android:paddingRight="@dimen/pad_right_list"
+    android:paddingStart="@dimen/pad_right_list"
+    android:paddingLeft="@dimen/pad_left_list"
+    android:paddingEnd="@dimen/pad_left_list">
 
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:textStyle="bold"
         android:textAllCaps="false"
-        android:textSize="24sp"
-        tools:text="Name:  earthquake"
-        />
+        android:textSize="@dimen/text_size_list"
+        tools:text="@string/sample_name" />
 
     <ImageView
         android:id="@+id/playbutton"
-        android:layout_width="34dp"
-        android:layout_height="34dp"
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_height"
         android:layout_alignRight="@+id/title"
+        android:layout_alignEnd="@+id/title"
         android:src="@drawable/playbutton"
-        android:background="#FFFFFF"/>
+        android:contentDescription="@string/button_desc"
+        android:background="@color/white"/>
 
     <TextView
         android:id="@+id/length"
@@ -35,8 +39,8 @@
         android:layout_below="@+id/title"
         android:textStyle="bold"
         android:textAllCaps="false"
-        android:textSize="24sp"
-        tools:text="Length:2 seconds"
+        android:textSize="@dimen/text_size_list"
+        tools:text="@string/sample_length"
         />
 
     <TextView
@@ -46,8 +50,8 @@
         android:layout_below="@+id/length"
         android:textStyle="bold"
         android:textAllCaps="false"
-        android:textSize="24sp"
-        tools:text="Size: 0.14 Mb" />
+        android:textSize="@dimen/text_size_list"
+        tools:text="@string/sample_size" />
 
     <TextView
         android:id="@+id/sound"
@@ -56,8 +60,8 @@
         android:layout_below="@+id/size"
         android:textStyle="bold"
         android:textAllCaps="false"
-        android:textSize="24sp"
+        android:textSize="@dimen/text_size_list"
         android:visibility="invisible"
-        tools:text="Name: Sound" />
+        tools:text="@string/sample_sound" />
 
 </RelativeLayout>

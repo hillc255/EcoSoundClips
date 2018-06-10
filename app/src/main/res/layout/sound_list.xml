@@ -4,8 +4,10 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:textColor="#FFFFFF"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"/>
+    android:textColor="@color/white"
+    android:paddingBottom="@dimen/pad_bottom_sound"
+    android:paddingLeft="@dimen/pad_left_sound"
+    android:paddingStart="@dimen/pad_right_sound"
+    android:paddingRight="@dimen/pad_right_sound"
+    android:paddingEnd="@dimen/pad_right_sound"
+    android:paddingTop="@dimen/pad_top_sound"/>

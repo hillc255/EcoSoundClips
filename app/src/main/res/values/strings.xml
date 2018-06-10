@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">EcoSoundClips</string>
+    <string name="button_desc">Circular sound playbutton</string>
+    <string name="sample_name">Name: Earthquake</string>
+    <string name="sample_length">Length: 2 seconds</string>
+    <string name="sample_size">Size: 0.14 Mb</string>
+    <string name="sample_sound">Name: Sound</string>
 </resources>

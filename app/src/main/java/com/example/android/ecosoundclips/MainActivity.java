@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
+/**
+ * MainActivity class displays 8 images in GridView created with ImageAdapter and ImageGrid
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -14,14 +17,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        GridView gridView = (GridView) findViewById(R.id.gridview);
+        //Get images from GridView and set them to the new ImageAdapter
+        GridView gridView = findViewById(R.id.gridview);
         gridView.setAdapter(new ImageAdapter(this));
-
+        //GridView listener for each image clicked
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            /**
+             * Pass corresponding AdapterView parameters for each GridView image clicked
+             * @param parent ImageAdapter to create the images in the grid
+             * @param v View within the AdapterView
+             * @param position position of item within the Adapter data set
+             * @param id row id associated with the position
+             */
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 // Create a new intent to open the {@link SoundActivity}
                 Intent soundIntent = new Intent(MainActivity.this, SoundActivity.class);
-                //pass variable relating to grid number position
+                //Pass variable relating to grid number position to SoundActivity
                 soundIntent.putExtra("gridNumber", position);
                 // Start the new activity
                 startActivity(soundIntent);

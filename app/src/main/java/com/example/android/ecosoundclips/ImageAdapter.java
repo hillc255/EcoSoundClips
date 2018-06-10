@@ -11,18 +11,20 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * ImageAdapter class provides arraylist of 8 images inflated
+ * Derived from: https://stackoverflow.com/questions/15261088/gridview-with-two-columns-and-auto-resized-images
+ */
 public final class ImageAdapter extends BaseAdapter {
     private final List<Item> mItems = new ArrayList<Item>();
     private final LayoutInflater mInflater;
 
-    //Adapter for GridView with images and text derived from the example below
-    // https://stackoverflow.com/questions/15261088/gridview-with-two-columns-and-auto-resized-images
-
-
+    /**
+     * ImageAdapter inflates arraylist for the GridView
+     * @param context arraylist of items for context
+     */
     public ImageAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
-
-
 
         mItems.add(new Item("Earthquake", R.drawable.earthquake));
         mItems.add(new Item("Fire", R.drawable.fire));
@@ -34,21 +36,42 @@ public final class ImageAdapter extends BaseAdapter {
         mItems.add(new Item("Wind", R.drawable.wind));
     }
 
+    /**
+     * getCount is the number of items in the arraylist
+     * @return number of items
+     */
     @Override
     public int getCount() {
         return mItems.size();
     }
 
+    /**
+     * getItem retrieves the name item in the arraylist
+     * @param i row number
+     * @return item name associated with row number
+     */
     @Override
     public Item getItem(int i) {
         return mItems.get(i);
     }
 
+    /**
+     * getItemId retrieves the image in the arraylist row
+     * @param i row number
+     * @return item image associated with the row number
+     */
     @Override
     public long getItemId(int i) {
         return mItems.get(i).drawableId;
     }
 
+    /**
+     * getView returns View of having text and image
+     * @param i  row number
+     * @param view  view
+     * @param viewGroup  inflated view
+     * @return View with both text and images
+     */
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         View v = view;
@@ -72,10 +95,12 @@ public final class ImageAdapter extends BaseAdapter {
         return v;
     }
 
-
+    /**
+     * Item returns name and image in a row
+     */
     private static class Item {
         public final String name;
-        public final int drawableId;
+        private final int drawableId;
 
         Item(String name, int drawableId) {
             this.name = name;
