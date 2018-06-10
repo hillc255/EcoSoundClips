@@ -12,13 +12,9 @@ When one of the MainActivity gid view photographs in the categories above is sel
 
 Clicking on the play button, to the right of each sound list, plays a clip of the environmental sound using Media Player.
 
-<p align="left">
- <kbd><img width="150" height="261" src="readme_assets/EcoSoundClips.gif"></kbd>
-</p>
 <p align="center">
- <kbd><img width="150" height="261" src="readme_assets/EcoSoundClips_list.gif"></kbd>
+ <kbd><img width="300" height="532" src="readme_assets/EcoSoundClips.gif"></kbd><kbd><img width="300" height="532" src="readme_assets/EcoSoundClips_list.gif"></kbd>
 </p>
-
 
 ## Code Description
 
