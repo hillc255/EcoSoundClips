@@ -13,8 +13,8 @@
     <dimen name="pad_right_list">20dp</dimen>
     <dimen name="pad_left_list">20dp</dimen>
     <dimen name="text_size_list">24sp</dimen>
-    <dimen name="image_width">30dp</dimen>
-    <dimen name="image_height">30dp</dimen>
+    <dimen name="image_width">34dp</dimen>
+    <dimen name="image_height">34dp</dimen>
     <!-- sound_list dimens -->
     <dimen name="pad_bottom_sound">16dp</dimen>
     <dimen name="pad_left_sound">16dp</dimen>

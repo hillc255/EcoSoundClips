@@ -30,7 +30,7 @@
         android:layout_alignEnd="@+id/title"
         android:src="@drawable/playbutton"
         android:contentDescription="@string/button_desc"
-        android:background="@color/white"/>
+        android:background="@color/black"/>
 
     <TextView
         android:id="@+id/length"
